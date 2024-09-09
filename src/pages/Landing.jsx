@@ -3,7 +3,7 @@
       const Landing = () => {
         return (
             <div>
-                Landing page
+                <h1 >Hello this is Landing page</h1>
             </div>
         );
       };

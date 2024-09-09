@@ -7,6 +7,7 @@ import Job from "./pages/Job";
 import PostJobs from "./pages/Post-Jobs";
 import SavedJobs from "./pages/Saved-jobs";
 import MyApplications from "./pages/My-applications";
+import { ThemeProvider } from "./components/theme.provider";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router}></RouterProvider>;
+  return (
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <RouterProvider router={router}></RouterProvider>
+    </ThemeProvider>
+  );
 }
 
 export default App;
