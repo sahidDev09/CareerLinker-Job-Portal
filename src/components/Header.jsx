@@ -11,18 +11,18 @@ import { Button } from "./ui/button";
 const Header = () => {
   return (
     <>
-      <nav className=" py-4 flex justify-between items-center">
+      <nav className=" py-4 flex justify-between items-center mx-3 md:mx-0">
         <Link>
-          <img src="./careerLinkerLogo.png" alt="" className=" h-20" />
+          <img src="./navlogo.png" alt="" className="md:h-20 h-14 " />
         </Link>
-        <Button variant="outline">Login</Button>
+        {/* <Button variant="outline">Login</Button> */}
 
-        {/* <SignedOut>
+        <SignedOut>
           <SignInButton />
         </SignedOut>
         <SignedIn>
           <UserButton />
-        </SignedIn> */}
+        </SignedIn>
       </nav>
     </>
   );
