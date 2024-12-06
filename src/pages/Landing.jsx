@@ -16,6 +16,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+
 const Landing = () => {
   return (
     <main className=" flex flex-col py-5 gap-7 m-2">
@@ -102,6 +103,7 @@ const Landing = () => {
       </section>
 
       {/* Accordians */}
+
       <section>
         <h1 className=" text-3xl text-center font-semibold">FAQ</h1>
         <Accordion type="single" collapsible>
