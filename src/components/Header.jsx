@@ -1,16 +1,15 @@
-/* eslint-disable no-unused-vars */
 import { Link, useSearchParams } from "react-router-dom";
+
+import { Button } from "./ui/button";
+import { BriefcaseBusiness, Heart, PenBox } from "lucide-react";
+import { useEffect, useState } from "react";
 import {
   SignedIn,
   SignedOut,
   SignIn,
-  SignInButton,
   UserButton,
   useUser,
 } from "@clerk/clerk-react";
-import { Button } from "./ui/button";
-import { BriefcaseBusiness, Heart, PenBox } from "lucide-react";
-import { useEffect, useState } from "react";
 
 const Header = () => {
   const [showSignIn, setShowSignin] = useState(false);
@@ -56,7 +55,7 @@ const Header = () => {
             <UserButton
               appearance={{
                 elements: {
-                  avatarBox:" w-10 h-10",
+                  avatarBox: " w-10 h-10",
                 },
               }}>
               <UserButton.MenuItems>
