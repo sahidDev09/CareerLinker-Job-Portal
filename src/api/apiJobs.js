@@ -43,7 +43,6 @@ export async function saveJobs(token, { alreadySaved }, saveData) {
       return null;
     }
     return data;
-
   } else {
     const { data, error: insertError } = await supabase
       .from("saved_job")
@@ -56,4 +55,21 @@ export async function saveJobs(token, { alreadySaved }, saveData) {
     }
     return data;
   }
+}
+
+export async function getSingleJob(token, { job_id }) {
+  const supabase = await supabaseClient(token);
+
+  const { data, error } = await supabase
+    .from("jobs")
+    .select("*, company:companies(name,logo), application: application(*)")
+    .eq("id", job_id)
+    .single();
+
+  if (error) {
+    console.error("Error fetching company", error);
+    return null;
+  }
+
+  return data;
 }

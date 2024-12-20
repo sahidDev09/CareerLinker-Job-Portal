@@ -75,7 +75,7 @@ const Landing = () => {
 
       <div>
         <img
-          src="/public/careerLinkerBigone.png"
+          src="/careerLinkerBigone.png"
           alt=""
           className="rounded-md md:h-[650px] lg:h-[720px] object-cover w-full"
         />
