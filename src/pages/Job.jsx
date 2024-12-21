@@ -1,4 +1,5 @@
 import { getSingleJob, updateHiringStatus } from "@/api/apiJobs";
+import ApplyJob from "@/components/ApplyJob";
 import {
   Select,
   SelectContent,
@@ -106,10 +107,19 @@ const Job = () => {
       </h2>
       <MDEditor.Markdown
         source={job?.requirements}
-        className=" bg-transparent sm:text-lg"
+        className=" text-gray-400 bg-transparent sm:text-lg"
       />
 
       {/* render application */}
+
+      {job?.recruiter_id !== user?.id && (
+        <ApplyJob
+          job={job}
+          user={user}
+          fetchJob={fnJob}
+          applied={job?.applications?.find((ap) => ap.candidate_id === user.id)}
+        />
+      )}
     </div>
   );
 };
