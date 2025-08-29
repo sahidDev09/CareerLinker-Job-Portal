@@ -18,6 +18,10 @@ import {
 
 
 const Landing = () => {
+
+  
+
+
   return (
     <main className=" flex flex-col py-5 gap-7 m-2">
       <section className=" text-center flex flex-col items-center justify-center">

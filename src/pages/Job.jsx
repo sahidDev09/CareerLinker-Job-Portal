@@ -3,7 +3,6 @@ import ApplyJob from "@/components/ApplyJob";
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
